@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-eureka-server7001</artifactId>
+    <artifactId>cloud-eureka-server7002</artifactId>
     <dependencies>
 
         <!--web/actuator这两个一般一起使用，写在一起-->

@@ -21,7 +21,7 @@ public class PaymentController {
                  int result = paymentService.create(payment);
               log.info("*****插入结果：" + result);
               if (result > 0){
-                  return new CommonResult(200, "插入数据库成功,Server.Port:"+serverPort, result);
+                  return new CommonResult(200, "插入数据库成功,ServerPort:"+serverPort, result);
                   }
                   return new CommonResult(444, "插入数据库失败", null);
             }

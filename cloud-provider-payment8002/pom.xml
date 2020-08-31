@@ -9,9 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-eureka-server7001</artifactId>
+    <artifactId>cloud-provider-payment8002</artifactId>
     <dependencies>
-
+        <!--引入eureka-client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <!--web/actuator这两个一般一起使用，写在一起-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -22,21 +26,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--引入自己定义的api通用包，可以使用payment支付entity-->
         <dependency>
             <groupId>org.cyj</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <!--引入eureka-server-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-        <!--引入eureka-client-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <!--Mybatis和SpringBoot的整合-->
         <dependency>
@@ -76,6 +69,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
