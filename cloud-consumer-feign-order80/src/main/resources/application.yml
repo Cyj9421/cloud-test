@@ -1,0 +1,29 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver         # mysql驱动包
+    url: jdbc:mysql://localhost:3306/mytest?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 9421
+eureka:
+  client:
+    register-with-eureka: false
+    #false表示不向注册中心注册自己
+    #true表示是否将自己注册金EurekaServer默认为true
+    fetch-registry: true
+    #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    #true是否从EurekaServer抓取自己的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    service-url:
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ #集群版
+      #单机版 http://localhost:7001/eureka
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.cyj.springcloud.entities    # 所有Entity别名类所在包
+
+

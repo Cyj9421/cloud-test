@@ -19,9 +19,9 @@ import java.util.List;
 @Slf4j
 public class OrderController {
     //集群版
-    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+    //public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
     //单机版
-    // public static final String PAYMENT_URL = "http://localhost:8001";
+     public static final String PAYMENT_URL = "http://localhost:8001";
     @Resource
     private RestTemplate restTemplate;
     @Resource
