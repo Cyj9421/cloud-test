@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+         <!DOCTYPE mapper
+                 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.cyj.springcloud.dao.PaymentDao">
+    <insert id="create" parameterType="com.cyj.springcloud.entities.Payment" useGeneratedKeys="true" keyProperty="id">
+         insert into payment(serial) values(#{serial});
+    </insert>
+    <!--定义一个结果集和实体类的映射表-->
+    <resultMap id="BaseResultMap" type="com.cyj.springcloud.entities.Payment">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <id column="serial" property="serial" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 这里是long Long会报错  不知道是为何-->
+    <select id="getPaymentById" parameterType="long" resultMap="BaseResultMap">
+         select * from payment where id=#{id};
+    </select>
+
+</mapper>
