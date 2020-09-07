@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:cyj/springcloud-config.git #GitHub上面的仓库名字
+          uri:  git@github.com:Cyj9421/springcloud-config.git  #GitHub上面的仓库名字
           search-paths:
             - springcloud-config  #搜索目录
       label: master   #读取分支
